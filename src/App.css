@@ -508,90 +508,194 @@ nav ul {
 }
 
 /* --------------------------------------------------------------------------
-   6. 푸터 영역 (하단 정보)
+   6. 푸터 영역 (목표 스타일: 짙은 네이비 레이아웃)
    -------------------------------------------------------------------------- */
-footer {
-    background: #07111c;
-    color: #a5bccc;
-    padding: 70px 0 40px 0;
+footer.footer {
+    background-color: #032b45;
+    color: #e0e0e0;
+    padding: 50px 0 30px 0;
     font-size: 13px;
-    border-top: 4px solid #42b883;
+    border-top: none;
+    position: relative;
 }
 
-/* 6-1. 상단 기업 로고 및 카테고리 링크 링크맵 */
-.footer-top {
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #162536;
+    gap: 40px;
+    position: relative;
     padding-bottom: 40px;
 }
 
-.footer-info {
-    flex: 1.2;
-}
-
-.footer-logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-    .footer-logo span {
-        color: #42b883;
-    }
-
-.footer-links-grid {
-    flex: 3.8;
+/* 6-1. 좌측 5열 링크 카테고리 */
+.footer-links-area {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 25px;
+    flex: 1;
 }
 
-.footer-link-group h5 {
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 18px;
+.footer-col h5 {
+    color: #ffffff;
+    font-size: 15px;
     font-weight: bold;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.footer-link-group ul li {
-    margin-bottom: 10px;
+.footer-col ul li {
+    margin-bottom: 8px;
 }
 
-    .footer-link-group ul li a {
-        color: #7f95a8;
+    .footer-col ul li a {
+        color: #c2d1db;
         font-size: 13px;
         transition: color 0.2s;
     }
 
-        .footer-link-group ul li a:hover {
-            color: #fff;
+        .footer-col ul li a:hover {
+            color: #ffffff;
         }
 
-/* 6-2. 하단 주소, 카피라이트 및 CS 정보 */
-.footer-bottom {
+/* 6-2. 우측 사이드 (인증, SNS, 뉴스레터) */
+.footer-side-area {
+    width: 280px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 13px;
-    color: #5c7082;
-    padding-top: 15px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.f-bottom-left span {
-    margin-right: 15px;
+.side-section h6 {
+    color: #ffffff;
+    font-size: 14px;
     font-weight: bold;
-    color: #7f95a8;
+    margin-bottom: 10px;
 }
 
-.f-bottom-left p {
-    margin-top: 10px;
-    line-height: 1.6;
+/* 인증 로고 */
+.auth-logos {
+    display: flex;
+    gap: 8px;
 }
 
-.f-bottom-right {
-    text-align: right;
-    line-height: 1.6;
+.auth-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    font-size: 11px;
+    color: #fff;
+}
+
+/* SNS 아이콘 */
+.sns-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.sns-icon {
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    color: #032b45;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 뉴스레터 구독 양식 */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.country-select {
+    width: 100%;
+    padding: 6px 8px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+
+.email-input-group {
+    display: flex;
+}
+
+    .email-input-group input {
+        flex: 1;
+        padding: 6px 8px;
+        border: none;
+        font-size: 12px;
+        outline: none;
+    }
+
+    .email-input-group button {
+        background: #416788;
+        color: #fff;
+        border: none;
+        padding: 0 12px;
+        font-size: 11px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+        .email-input-group button:hover {
+            background: #507b9e;
+        }
+
+/* TOP 버튼 */
+.btn-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+/* 6-3. 하단 정책 및 저작권 문구 */
+.footer-bottom-area {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-policy {
+    margin-bottom: 12px;
+    color: #8da4b4;
+    font-size: 13px;
+}
+
+    .footer-policy a {
+        color: #ffffff;
+        margin: 0 4px;
+    }
+
+        .footer-policy a:first-child {
+            margin-left: 0;
+        }
+
+.copyright {
+    color: #8da4b4;
+    font-size: 12px;
 }
